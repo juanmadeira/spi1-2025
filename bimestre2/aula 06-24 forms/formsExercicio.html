@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+    <body>
+        <table border="1" width="600" height="300">
+            <tr>
+                <td>Nome:</td>
+                <td colspan="2"><input type="text" name="nome" value="Digite seu nome aqui" size="45"></td>
+            </tr>
+            <tr>
+                <td rowspan="4">Ingressos:</td>
+                <td>Tipo:</td>
+                <td>Quantidade:</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="tipoIng" value="arq-sup">Arquibancada superior</td>
+                <td><select name="arq-sup">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="tipoIng" value="arq-inf">Arquibancada inferior</td>
+                <td><select name="arq-inf">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="tipoIng" value="camarote">Camarote
+                <td><select name="camarote">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td rowspan="3">Forma de Pagamento:</td>
+                <td>Tipo:</td>
+                <td>Número de parcelas:</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="tipoPag" value="boleto">Boleto</td>
+                <td>À Vista</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="tipoPag" value="credito">Cartão de Crédito</td>
+                <td><select name="credito">
+                    <option value="1x" selected="selected">1x</option>
+                    <option value="2x">2x</option>
+                    <option value="3x">3x</option>
+                    <option value="6x">6x</option>
+                    <option value="12x">12x</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Login:</td>
+                <td colspan="2"><input type="text" name="login" value="Digite seu nome de usuário para login" size="45"></td>
+            </tr>
+            <tr>
+                <td>Senha:</td>
+                <td colspan="2"><input type="password" name="Digite sua senha" size="25"></td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center"><input type="submit" value="Enviar"></td>
+            </tr>
+        </table>
+    </body>
+</html>
