@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário</title>
+    </head>
+    <body>
+        <!-- Crie um formulário com os seguintes campos:
+            a) Nome (texto)
+            b) Senha (password)
+            c) Nacionalidade (radio: brasileiro, estrangeiro)
+            d) Interesses (checkbox: HTML, CSS, JS)
+            e) Comentários (textarea)
+            f) Botões de enviar e limpar
+            g) Use action="obrigado.html" e method="get" -->
+        <h1>Cadastro para ser mesário nas próximas eleições</h1>
+        <form name="formulario" action="obrigado.html" method="GET">
+            <label for="nome">Insira seu nome: </label>
+            <input type="text" name="nome">
+            
+            <br>
+            <label for="senha">Insira sua senha: </label>
+            <input type="password" name="senha">
+            
+            <br><br>
+            <label for="nacionalidade">Nacionalidade: </label><br>
+            <input type="radio" name="nacionalidade" value="brasileiro"> Brasileiro 
+            <input type="radio" name="nacionalidade" value="estrangeiro"> Estrangeiro
+            
+            <br><br>
+            <label for="interesses">Interesses:</label><br>
+            <input type="checkbox" name="interesses" value="HTML"> HTML
+            <input type="checkbox" name="interesses" value="CSS"> CSS
+            <input type="checkbox" name="interesses" value="JS"> JavaScript
+
+            <br><br>
+            <label for="comentarios">Interesses:</label><br>
+            <textarea name="comentarios" rows="10" cols="42" placeholder="Digite aqui o que você tem a dizer!"></textarea>
+
+            <br></br>
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar">
+        </form>
+    </body>
+</html>
