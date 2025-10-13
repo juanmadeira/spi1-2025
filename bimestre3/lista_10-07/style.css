@@ -5,10 +5,14 @@
 
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./img/frutiger-aero.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
 h1 {
+    padding: 15px;
     text-align: center;
     background: -webkit-linear-gradient(#eee, #00ffff);
     -webkit-background-clip: text;
@@ -16,7 +20,7 @@ h1 {
 }
 
 main {
-    padding: 25px;
+    padding: 0px 25px 25px 25px;
     display: grid;
     place-items: center;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -27,6 +31,8 @@ main {
     width: 350px;
     height: 350px;
     padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
     border: 2px rgba(0, 0, 255, 0.5) dashed;
     border-radius: 10%;
     opacity: 0.75;
@@ -34,8 +40,8 @@ main {
 }
 
 .comando {
+    margin: 10px;
     text-align: center;
-    font-size: 1.1rem;
     font-weight: bolder;
     letter-spacing: 1px;
     background: -webkit-linear-gradient(#eee, #00ffff);
@@ -43,9 +49,7 @@ main {
     -webkit-text-fill-color: transparent;
 }
 
-.d1,
-.d2,
-.d3 {
+.d1, .d2, .d3 {
     width: 50px;
     height: 50px;
     border: 1px #000000 solid;
@@ -64,10 +68,66 @@ main {
     justify-content: center;
 }
 
-.ex3 > .d1,
-.ex3 > .d2,
-.ex3 > .d3 {
+.ex3 > * {
     width: 100%;
+}
+
+.ex4 > * {
+    margin: 25px;
+}
+
+.ex5 {
+    padding: 25px;
+}
+
+.ex6 {
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+}
+
+.ex7 {
+    display: flex;
+    justify-content: end;
+}
+
+.ex8 {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.ex8 .d2 { order: 1 }
+.ex8 .d3 { order: 2 }
+.ex8 .d1 { order: 3 }
+
+.ex9 {
+    display: flex;
+}
+
+.ex9 .d1 { flex-grow: 3 }
+.ex9 .d2 { flex-grow: 2 }
+.ex9 .d3 { flex-grow: 1 }
+
+.ex10 {
+    width: 100px;
+    display: flex;
+    border: 5px solid rgba(138, 43, 226, 0.25);
+}
+
+.ex10 > * {
+    flex-shrink: 1;
+}
+
+.ex11 {
+    width: 100px;
+    display: flex;
+    border: 5px solid rgba(138, 43, 226, 0.25);
+}
+
+.ex11 > * {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
 }
 
 .ex12 {
@@ -76,9 +136,7 @@ main {
     flex-flow: row wrap;
 }
 
-.ex12 > .d1,
-.ex12 > .d2,
-.ex12 > .d3 {
+.ex12 > * {
     flex: 1;
 }
 
@@ -88,15 +146,20 @@ main {
     flex-flow: row wrap;
 }
 
-.ex13 > .d1,
-.ex13 > .d2,
-.ex13 > .d3 {
+.ex13 > * {
     flex: 1;
 }
 
 .exercicio:has(.ex12),
 .exercicio:has(.ex13) {
-    width: calc(100vw - 19px);
+    width: 100vw;
     padding: 0px;
+    border: 0px;
     border-radius: 0px;
+}
+
+.ex14 {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
 }
