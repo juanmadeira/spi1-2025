@@ -1,0 +1,5 @@
+# 1. Quantos pixels o elemento da classe caixa ocupa em altura e largura?
+100px de altura e 200px de largura.
+
+# 2. Qual propriedade faz as caixas serem exibidas na ordem 3 2 1?
+flex-direction: column-reverse, mais especificamente o "reverse".

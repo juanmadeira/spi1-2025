@@ -1,0 +1,19 @@
+.container {
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    border: 2px solid #000000;
+    background-color: #cacaca;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+}
+
+#box1 { background-color: #4caf50; align-self: flex-end; }
+#box2 { background-color: #2196f3; align-self: center; }
+#box3 { background-color: #f44336; align-self: flex-start; }

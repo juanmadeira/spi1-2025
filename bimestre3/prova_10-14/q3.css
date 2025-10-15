@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    color: #ffffff;
+}
+
+#box1 { background-color: #ff0000; order: 2; }
+#box2 { background-color: #000000; order: 1; }
+#box3 { background-color: #008000; order: 3; }
