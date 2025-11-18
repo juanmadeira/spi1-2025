@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Roleta Russa</title>
+    </head>
+    <body>
+        <div class="resultado"></div>
+        <script>
+            let revolver = Math.random() * (6 - 1) + 1
+            console.log(revolver)
+            let bala = "a"
+            switch (revolver) {
+                case 1:
+                    bala = "Tá safo";
+                    break;
+                case 2:
+                    bala = "Tá safo";
+                    break;
+                case 3:
+                    bala = "Tá safo";
+                    break;
+                case 4:
+                    bala = "Tá safo";
+                    break;
+                case 5:
+                    bala = "Tá safo";
+                    break;
+                case 6:
+                    bala = "Tomou bala";
+                    break;
+            }
+            document.querySelector(".resultado").innerHTML = bala
+        </script>
+    </body>
+</html>

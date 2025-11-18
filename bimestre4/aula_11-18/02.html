@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estruturas de Controle</title>
+    </head>
+    <body>
+        <div id="foo"></div>
+        <script>
+            console.log(new Date())
+            var dia = new Date().getDay();
+            switch (dia) {
+                case 0:
+                    x = "Hoje é domingo";
+                    break;
+                case 1:
+                    x = "Hoje é segunda";
+                    break;
+                case 2:
+                    x = "Hoje é terça";
+                    break;
+                case 3:
+                    x = "Hoje é quarta";
+                    break;
+                case 4:
+                    x = "Hoje é quinta";
+                    break;
+                case 5:
+                    x = "Hoje é sexta";
+                    break;
+                case 6:
+                    x = "Hoje é sábado";
+                    break;
+            }
+
+            const np = document.createElement("p");
+            np.textContent = x;
+            document.getElementById("foo").appendChild(np)
+        </script>
+    </body>
+</html>
