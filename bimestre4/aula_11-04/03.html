@@ -4,13 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Manipulando Objetos</title>
+        <script defer type="text/javascript">
+            function mostrar() {
+                var x = document.getElementById("v1");
+                alert("o valor digitado foi " + x.value);
+            }
+        </script>
     </head>
-    <script defer>
-        function mostrar() {
-            var x = document.getElementById("v1");
-            alert("o valor digitado foi " + x.value);
-        }
-    </script>
     <body>
         <form id="form">
             x: <input type="text" id="v1">

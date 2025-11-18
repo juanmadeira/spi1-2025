@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Calculadora de Soma</title>
+        <script defer type="text/javascript">
+            function soma() {
+                var x = parseInt(document.getElementById("x").value);
+                var y = parseInt(document.getElementById("y").value);
+                alert("a soma x + y é igual a " + (x + y));
+            }
+        </script>
     </head>
-    <script defer>
-        function soma() {
-            var x = parseInt(document.getElementById("x").value);
-            var y = parseInt(document.getElementById("y").value);
-            alert("a soma x + y é igual a " + (x + y));
-        }
-    </script>
     <body>
         <form id="form">
             x: <input type="text" id="x">
