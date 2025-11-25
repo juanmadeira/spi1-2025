@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 1</title>
+        <style>
+            .botao {
+                width: 200px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #000;
+                border-radius: 10%;
+                background-color: white;
+            }
+
+            .cor {
+                background-color: cyan;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="botao">botão</button>
+    </body>
+    <script>
+        let body = document.querySelector("body");
+        let btn = document.querySelector(".botao");
+
+        btn.addEventListener("mouseover", () => {
+            btn.style.backgroundImage = "linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)";
+            btn.style.textTransform = "uppercase";
+        })
+
+        btn.addEventListener("mouseleave", () => {
+            btn.style.backgroundImage = "";
+            btn.style.textTransform = "";
+        })
+
+        btn.addEventListener("click", () => {
+            body.classList.toggle("cor");
+        });
+    </script>
+</html>
