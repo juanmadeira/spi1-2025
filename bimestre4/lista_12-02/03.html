@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>03.html</title>
+        <style>
+            .texto {
+                border: 2px solid green;
+                min-height: 100px;
+            }
+
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis incidunt ducimus esse omnis veniam harum tempora laudantium fugiat! Eius cupiditate quis inventore sit perspiciatis, numquam neque itaque nihil quae.</div>
+        <button>alternar display</button>
+    </body>
+    <script>
+        document.querySelector("button").addEventListener("click", () => {
+            document.querySelector(".texto").classList.toggle("hidden");
+        });     
+    </script>
+</html>

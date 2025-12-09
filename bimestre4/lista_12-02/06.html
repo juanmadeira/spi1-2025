@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>06.html</title>
+    </head>
+    <body>
+        <input type="text"></input>
+        <button class="add">adicionar</button>
+        <ul></ul>
+    </body>
+    <script>
+        document.querySelector(".add").addEventListener("click", () => {
+            ul = document.querySelector("ul");
+            li = document.createElement("li");
+            remove = document.createElement("button");
+            remove.classList += "remove";
+            remove.innerText = "🗑";
+            ul.appendChild(li);
+            li.innerText = document.querySelector("input").value;
+            li.appendChild(remove);
+
+            remove = document.querySelectorAll(".remove");
+            remove.forEach(e => {
+                e.addEventListener("click", () => {
+                    e.parentElement.remove();
+                })
+            });
+        })
+    </script>
+</html>

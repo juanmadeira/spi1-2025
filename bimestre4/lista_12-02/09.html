@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>09.html</title>
+        <style>
+            body {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            
+            div {
+                font-size: 5rem;    
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <p class="contador">Teclas apertadas: <span></span></p>
+    </body>
+    <script>
+        let contador = 0;
+        document.querySelector(".contador span").innerText = contador;
+                
+        document.addEventListener("keydown", (e) => {
+            contador++;
+            document.querySelector("div").innerText = e.key;
+            document.querySelector(".contador span").innerText = contador;
+        });
+
+        document.addEventListener("keyup", () => {
+            document.querySelector("div").innerText = "";            
+        });
+    </script>
+</html>

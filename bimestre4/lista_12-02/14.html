@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>14.html</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+                height: 100vh;
+            }
+
+            div {
+                width: 15%;
+                height: 100px;
+                background-color: cyan;
+            }
+
+            button {
+                padding: 5px 10px;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <button>+</button>
+        <div></div>
+    </body>
+    <script>
+        let currentWidth = 15;
+        document.querySelector("button").addEventListener("click", () => {
+            currentWidth += 10;
+            if (currentWidth >= 100) {
+                currentWidth = 100;
+            }
+            document.querySelector("div").style.width = currentWidth+"%";
+        });
+    </script>
+</html>

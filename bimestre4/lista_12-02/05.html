@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>05.html</title>
+    </head>
+    <body>
+        <input type="text"></input>
+        <button>adicionar</button>
+        <ul></ul>
+    </body>
+    <script>
+        document.querySelector("button").addEventListener("click", () => {
+            ul = document.querySelector("ul");
+            li = document.createElement("li");
+            ul.appendChild(li)
+            li.innerText = document.querySelector("input").value;
+        })
+    </script>
+</html>

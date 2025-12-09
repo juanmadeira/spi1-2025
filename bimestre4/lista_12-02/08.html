@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>08.html</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            
+            div {
+                font-size: 5rem;    
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+    <script>
+        document.addEventListener("keydown", (e) => {
+            document.querySelector("div").innerText = e.key;
+        })
+        
+        document.addEventListener("keyup", () => {
+            document.querySelector("div").innerText = "";            
+        })
+    </script>
+</html>

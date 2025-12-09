@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>04.html</title>
+        <style>
+            * {
+                color: white;
+            }
+            
+            .azul {
+                background-color: blue;
+            }
+
+            .verde {
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="azul">azul</button>
+        <button class="verde">verde</button>
+    </body>
+    <script>
+        document.querySelector(".azul").addEventListener("click", () => {
+            document.body.style.backgroundColor = "blue";
+        });
+
+        document.querySelector(".verde").addEventListener("click", () => {
+            document.body.style.backgroundColor = "green";
+        });
+    </script>
+</html>

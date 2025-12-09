@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>01.html</title>
+        <style>
+            .p1 {
+                border: 2px solid red;
+                min-height: 100px;
+            }
+
+            .p2 {
+                border: 2px solid blue;
+                min-height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora non alias, saepe pariatur nesciunt eos magni at sed, molestias ipsa, voluptatibus dicta rem assumenda accusantium laborum? Quaerat nostrum ea cupiditate!</p>
+        <p class="p2"></p>
+        <button>mudar texto</button>
+    </body>
+    <script>
+        document.querySelector("button").addEventListener("click", () => {
+            if (document.querySelector(".p2").innerText == "") {
+                document.querySelector(".p2").innerText = document.querySelector(".p1").innerText;
+                document.querySelector(".p1").innerText = "";
+            } else {
+                document.querySelector(".p1").innerText = document.querySelector(".p2").innerText;
+                document.querySelector(".p2").innerText = "";
+            }
+        });
+    </script>
+</html>

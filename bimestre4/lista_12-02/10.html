@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>10.html</title>
+        <style>
+            body {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .mostra {
+                min-height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mostra"></div>
+        <div class="imagens">
+            <img src="./assets/10-1.gif">
+            <img src="./assets/10-2.gif">
+            <img src="./assets/10-3.gif">
+        </div>
+    </body>
+    <script>
+        document.querySelectorAll("img").forEach(e => {
+            e.addEventListener("click", () => {
+                document.querySelector(".mostra").innerText = "";
+                clone = e.cloneNode();
+                clone.style.height = "200px";
+                document.querySelector(".mostra").appendChild(clone);
+            })
+        });
+    </script>
+</html>

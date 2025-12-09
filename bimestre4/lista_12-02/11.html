@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>11.html</title>
+        <style>
+            div {
+                max-height: 1.5rem;
+                line-height: 1.5rem;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="mais">mostrar mais</button>
+        <button class="menos">mostrar menos</button>
+        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At autem consequatur labore tenetur eligendi mollitia cum provident fuga ipsum veniam magnam asperiores amet hic vitae, veritatis rem, non impedit distinctio.
+        Deserunt, animi. Nisi quia ea beatae aperiam temporibus eaque ipsa. Porro laborum, earum mollitia aut nam quae placeat sint eveniet ipsam deserunt reiciendis nesciunt perferendis consectetur laboriosam labore provident exercitationem.
+        Quam consectetur aperiam, explicabo odio inventore impedit possimus ullam optio ab quaerat eveniet fugiat, voluptate consequatur neque. Recusandae sit delectus tempore ipsum, vitae, voluptatibus aliquam maiores, mollitia neque vel placeat!
+        Doloremque tenetur ab consectetur natus delectus non consequatur, quos ad laboriosam asperiores, cumque, nostrum ipsa perspiciatis dolorem debitis eaque dolorum soluta quaerat accusantium error perferendis ducimus quisquam explicabo nulla? Aperiam!
+        Labore itaque dolorem nam exercitationem reprehenderit, porro, natus esse consequatur dignissimos distinctio enim facilis laboriosam accusantium fugiat, voluptates dolorum? Perspiciatis quis nesciunt nam doloribus corrupti dolor, rem iure nostrum quidem.
+        Necessitatibus commodi rem praesentium possimus facilis itaque sapiente in incidunt sunt. Consequatur libero, eaque aliquam quo reiciendis delectus optio, ipsum incidunt quisquam asperiores in iste cupiditate officia labore et accusantium.
+        Ut aperiam, aspernatur illum quidem molestias explicabo provident quas quis quam soluta doloremque qui eligendi delectus eum enim dolorem iusto. Velit dolorem illo, dolor quod minima explicabo animi odit quam?
+        Quis dolorem voluptatem quia natus aliquid officiis perferendis sed facilis rerum obcaecati voluptates aspernatur dolorum itaque, neque culpa similique nobis error, saepe dolore repudiandae illo tempora? Non iure ducimus cupiditate!
+        Laborum debitis blanditiis necessitatibus dolores aliquid voluptatibus aperiam odio quod illum sequi aut nulla voluptatem fugit provident iure, ipsam cum quibusdam quasi adipisci repellendus sapiente porro! Reprehenderit dolorem qui nihil.
+        Quos cumque delectus libero quod repellendus qui autem ex eius neque! Quaerat eius, dolorum nesciunt amet tenetur minus hic, ratione voluptas cum tempora deleniti ullam obcaecati, unde facilis. Alias, quos!</div>
+    </body>
+    <script>
+        let currentMaxHeight = 1.5;
+
+        document.querySelector('.mais').onclick = () => {
+            currentMaxHeight += 1.5;
+            document.querySelector('div').style.maxHeight = currentMaxHeight+"rem";
+        }
+        
+        document.querySelector('.menos').onclick = () => {
+            if (currentMaxHeight <= 1.5) return;
+            currentMaxHeight -= 1.5;
+            document.querySelector('div').style.maxHeight = currentMaxHeight+"rem";
+        }
+    </script>
+</html>

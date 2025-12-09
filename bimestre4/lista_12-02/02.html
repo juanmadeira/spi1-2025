@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>02.html</title>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div class="contador">0</div>
+        <button class="add">+</button>
+        <button class="sub">-</button>
+    </body>
+    <script>
+        contador = 0;
+        document.querySelector(".add").addEventListener("click", () => {
+            contador++;
+            document.querySelector(".contador").innerText = contador;
+        });
+
+        document.querySelector(".sub").addEventListener("click", () => {
+            contador--;
+            document.querySelector(".contador").innerText = contador;
+        });
+    </script>
+</html>
