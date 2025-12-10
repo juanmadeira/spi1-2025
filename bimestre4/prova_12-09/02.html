@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>02.html</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+                height: 100vh;
+            }
+
+            span {
+                margin: 25px;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            span button {
+                padding: 10px;
+                transition: transform 0.3s;
+                border: none;
+                border-radius: 5px;
+                background-color: rgba(52, 152, 219, 0.5);
+            }
+
+            span button:hover {
+                transform: scale(1.125);
+                cursor: pointer;
+            }
+
+            span button:active {
+                transform: scale(1);
+            }
+
+            p {
+                max-width: 75%;
+                max-height: 3rem;
+                line-height: 24px;
+                overflow: clip;
+                text-indent: 50px;
+                text-align: justify;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            Crie um texto grande e “esconda” uma parte. Implemente os
+            botões: “Mostrar mais” e “Mostrar menos”.
+        -->
+        <span>
+            <button class="mais">mostrar mais</button>
+            <button class="menos">mostrar menos</button>
+        </span>
+        <div class="wrapper">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dignissimos nulla delectus quas in! Cumque blanditiis tempore incidunt eos placeat tempora, iusto adipisci quo, quasi reprehenderit iste esse aliquam sunt!
+            Pariatur repudiandae dolor possimus ullam cumque autem quibusdam quis fugiat nemo! Cum, aspernatur sed. Quae quod amet magnam? Fugiat laboriosam deleniti nisi, labore neque quaerat aut architecto aperiam animi quas!
+            At nostrum necessitatibus deserunt distinctio consequatur, facilis autem excepturi inventore, fuga voluptatibus ad, cumque eligendi veniam delectus? Soluta ipsa voluptatem a consequatur sapiente at, nostrum perferendis, consequuntur repudiandae, illo laborum.
+            Aliquam molestiae id in suscipit blanditiis fugiat laborum, corrupti tempore praesentium dolorum quod ea exercitationem quia vero error ipsum. Recusandae dicta molestiae atque repudiandae autem assumenda similique consectetur odio tempora?
+            Ipsa sunt eum quisquam molestias fugiat officiis excepturi deleniti inventore? Hic non molestiae libero, fugit rem et nihil accusamus cum alias ut beatae nostrum aliquam nam omnis facilis quos? Suscipit!
+            Voluptate accusantium ex itaque beatae dignissimos perspiciatis excepturi vero error, ipsam asperiores qui mollitia id sunt ratione quisquam accusamus cumque culpa optio tempora, iste necessitatibus. Exercitationem distinctio et debitis asperiores?
+            Perferendis eius mollitia amet aliquid quidem soluta eum architecto libero cumque obcaecati. A voluptatem aspernatur praesentium ullam aliquam voluptate error id tempora et molestias. Quae laborum dolorem et delectus numquam!
+            Dolorum, alias? Veniam porro excepturi architecto totam praesentium beatae nesciunt! Atque laudantium minima excepturi magnam beatae perferendis maxime qui neque sequi deserunt corporis commodi vero unde facilis, iusto dicta repellat.
+            Illum quisquam cupiditate perferendis ratione. Quo optio ipsam, vitae dolorum amet praesentium laborum cumque ratione repellendus excepturi, officia nisi qui veritatis cum similique iusto blanditiis rem, molestias quam incidunt minima!
+            Laborum ullam ut molestiae consequuntur est. Repellendus dicta optio sunt quisquam, necessitatibus eaque ratione saepe libero rerum praesentium ab? Fugit rem facere earum, aspernatur culpa amet id sed porro pariatur!</p>
+        </div>
+    </body>
+    <script>
+        let currentMaxHeight = 48;
+        let p = document.querySelector("p");
+
+        document.querySelector(".mais").onclick = () => {
+            // scrollHeight = line-height máximo = 1.5 * nº de linhas
+            if (p.offsetHeight >= p.scrollHeight) return;
+            currentMaxHeight += 24;
+            p.style.maxHeight = currentMaxHeight+"px";
+        }
+        
+        document.querySelector(".menos").onclick = () => {
+            // 24 = line-height mínimo = 1.5 linhas
+            if (currentMaxHeight <= 24) return;
+            currentMaxHeight -= 24;
+            document.querySelector('p').style.maxHeight = currentMaxHeight+"px";
+        }
+    </script>
+</html>

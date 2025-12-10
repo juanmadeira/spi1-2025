@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>04.html</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+                height: 100vh;
+            }
+
+            div {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                width: 300px;
+            }
+
+            span {
+                width: 80px;
+                height: 80px;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                font-size: 2rem;
+                background-color: rgb(52, 152, 219);
+                border-radius: 10px;
+                transition: transform 0.3s, background-color 0.3s;
+            }
+
+            span:hover {
+                transform: scale(1.125);
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            Crie um jogo da velha que exiba uma grade de 3x3. Ao clicar em
+            uma célula dessa grade, deve exibir X ou O alternadamente. Não é necessário
+            definir quem ganhou.
+        -->
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </body>
+    <script>
+        lastMove = "O";
+        document.querySelectorAll("span").forEach(e => {
+            e.addEventListener("click", () => {
+                if (lastMove == "O") {
+                    lastMove = "X"
+                }
+                
+                else if (lastMove == "X") {
+                    lastMove = "O"
+                }
+
+                e.innerText = lastMove;
+            }, {once: true})
+        });
+    </script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>03.html</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                height: 100vh;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            p {
+                max-width: 50%;
+                font-size: 1.75rem;
+                text-align: justify;
+                text-indent: 50px;
+            }
+
+            .bg-cyan {
+                background-color: cyan;
+            }
+
+            .color-red {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            Faça uma página que exiba um texto. A página deve mudar a cor
+            do fundo toda vez que o usuário pressiona a tecla f e muda a cor do texto toda
+            vez que o usuário aperta t.
+        -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, obcaecati? Fuga, ut! Hic quibusdam nam ipsa, ea repellendus quae! Ea accusamus repellat commodi! Accusamus nostrum nesciunt officiis provident facilis est?</p>
+    </body>
+    <script>
+        document.addEventListener("keydown", (e) => {
+            if (e.keyCode === 70) {
+                document.body.classList.toggle("bg-cyan");
+            }
+            else if (e.keyCode === 84) {
+                document.body.classList.toggle("color-red")
+            }
+        })
+    </script>
+</html>

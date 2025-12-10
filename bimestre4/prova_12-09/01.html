@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>01.html</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                height: 100vh;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+            }
+
+            input {
+                width: 250px;
+                padding: 10px 15px;
+            }
+            
+            button {
+                padding: 5px;
+            }
+
+            li > button {
+                padding: 0px;
+                margin-left: 10px;
+                font-size: 1.25rem;
+                border: none;
+                background: transparent;
+                transition: transform 0.2s;
+            }
+
+            li > button:hover {
+                transform: scale(1.125);
+            }
+
+            li > button:active {
+                transform: scale(1);
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            Crie uma aplicação de uma lista de tarefas.
+            - É preciso permitir que a tarefa seja adicionada através de um campo de
+            texto e um botão de “adicionar”
+            - Cada tarefa criada deve exibir um botão de “completar”
+            - Quando a tarefa é completa, o texto deve ficar riscado e o botão de
+            completar não deve mais ser exibido.
+            - (dica: use text-decoration: line-through;)
+        -->
+        <p>lista de tarefas.</p>
+        <input type="text"></input>
+        <button class="add">adicionar</button>
+        <ul></ul>
+    </body>
+    <script>
+        document.querySelector(".add").addEventListener("click", () => {
+            ul = document.querySelector("ul");
+            li = document.createElement("li");
+            remove = document.createElement("button");
+            remove.classList += "remove";
+            remove.innerText = "☑️";
+            ul.appendChild(li);
+            li.innerText = document.querySelector("input").value;
+            li.appendChild(remove);
+
+            remove = document.querySelectorAll(".remove");
+            remove.forEach(e => {
+                e.addEventListener("click", () => {
+                    e.parentElement.style.textDecoration = "line-through";
+                    e.innerText = ""
+                })
+            });
+        })
+    </script>
+</html>
